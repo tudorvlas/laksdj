@@ -1,6 +1,8 @@
+diff --git a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
+index bb25608..7c334f2 100755
 --- a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
 +++ b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
-@@ -34,9 +34,9 @@ use Drupal\tmgmt\Translator\TranslatableResult;
+@@ -31,11 +31,10 @@ use Drupal\tmgmt\Translator\TranslatableResult;
   * Translator @endlink. Note that we are using HTTP API.
   *
   * @TranslatorPlugin(
@@ -8,7 +10,10 @@
 - *   label = @Translation("Microsoft"),
 - *   description = @Translation("Microsoft Translator service."),
 + *   id = "amplexor",
-+ *   label = @Translation("Amplexor"),
++ *   label = @Translation("Smplexor"),
 + *   description = @Translation("Amplexor Translator service."),
   *   ui = "Drupal\tmgmt_microsoft\MicrosoftTranslatorUi",
+- *   logo = "icons/microsoft.svg",
   * )
+  */
+ class MicrosoftTranslator extends TranslatorPluginBase implements ContainerFactoryPluginInterface, ContinuousTranslatorInterface {
