@@ -1,5 +1,3 @@
-diff --git a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
-index bb25608..67d52bd 100755
 --- a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
 +++ b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
 @@ -34,9 +34,9 @@ use Drupal\tmgmt\Translator\TranslatableResult;
