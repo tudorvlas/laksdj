@@ -1,5 +1,5 @@
 diff --git a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
-index bb25608..7c334f2 100755
+index bb25608..a0fb18b 100755
 --- a/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
 +++ b/src/Plugin/tmgmt/Translator/MicrosoftTranslator.php
 @@ -31,11 +31,10 @@ use Drupal\tmgmt\Translator\TranslatableResult;
@@ -10,10 +10,28 @@ index bb25608..7c334f2 100755
 - *   label = @Translation("Microsoft"),
 - *   description = @Translation("Microsoft Translator service."),
 + *   id = "amplexor",
-+ *   label = @Translation("X-connect"),
++ *   label = @Translation("Smplexor"),
 + *   description = @Translation("Amplexor Translator service."),
   *   ui = "Drupal\tmgmt_microsoft\MicrosoftTranslatorUi",
 - *   logo = "icons/microsoft.svg",
   * )
   */
  class MicrosoftTranslator extends TranslatorPluginBase implements ContainerFactoryPluginInterface, ContinuousTranslatorInterface {
+@@ -279,7 +278,7 @@ class MicrosoftTranslator extends TranslatorPluginBase implements ContainerFacto
+     }
+     catch (BadResponseException $e) {
+       $error = json_decode($e->getResponse()->getBody()->getContents(), TRUE);
+-      throw new TMGMTException('Microsoft Translate service returned the following error: @error', ['@error' => $error['error_description']]);
++      throw new TMGMTException('The job could not be processed, please try again later.');
+     }
+ 
+     $data = json_decode($response->getBody()->getContents(), FALSE);
+@@ -330,7 +329,7 @@ class MicrosoftTranslator extends TranslatorPluginBase implements ContainerFacto
+ 
+         }
+         catch (RequestException $e) {
+-          $job->rejected('Rejected by Microsoft Translator: @error', array('@error' => $e->getResponse()->getBody()->getContents()), 'error');
++          $job->rejected('The job could not be processed, please try again later.', 'error');
+         }
+       }
+     }
