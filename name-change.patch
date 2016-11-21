@@ -10,8 +10,8 @@ index bb25608..a0fb18b 100755
 - *   label = @Translation("Microsoft"),
 - *   description = @Translation("Microsoft Translator service."),
 + *   id = "amplexor",
-+ *   label = @Translation("Smplexor"),
-+ *   description = @Translation("Amplexor Translator service."),
++ *   label = @Translation("AMPLEXOR"),
++ *   description = @Translation("AMPLEXOR Translator service."),
   *   ui = "Drupal\tmgmt_microsoft\MicrosoftTranslatorUi",
 - *   logo = "icons/microsoft.svg",
   * )
